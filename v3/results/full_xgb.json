@@ -1,0 +1,255 @@
+{
+  "name": "full_xgb",
+  "model": "xgb",
+  "stages": 3,
+  "features": [
+    "mean_vm",
+    "std_vm",
+    "time_since_last_movement",
+    "roll_mean_vm_2m",
+    "roll_std_vm_2m",
+    "roll_mean_vm_5m",
+    "roll_std_vm_5m",
+    "fft_power_low",
+    "fft_power_high",
+    "fft_dominant_freq",
+    "fft_spectral_entropy",
+    "time_since_onset",
+    "night_fraction",
+    "sin_90min",
+    "cos_90min",
+    "delta_vm",
+    "delta_std_vm",
+    "lag_mean_vm_1",
+    "lag_mean_vm_2",
+    "lag_mean_vm_3",
+    "mean_angle",
+    "std_angle",
+    "angle_change"
+  ],
+  "normalize": false,
+  "feature_sets": [
+    "baseline",
+    "frequency",
+    "circadian",
+    "transition",
+    "angular"
+  ],
+  "notes": "All features combined (XGB)",
+  "cv_scores": {
+    "accuracy": {
+      "mean": 0.5951883528506224,
+      "std": 0.021332712624580048
+    },
+    "f1_macro": {
+      "mean": 0.5248622362520469,
+      "std": 0.046469831451759695
+    },
+    "f1_weighted": {
+      "mean": 0.6131861388313549,
+      "std": 0.01911552972705519
+    }
+  },
+  "best_thresholds": {
+    "rem": 0.4500000000000001
+  },
+  "best_threshold_f1": 0.5237464889025845,
+  "report": {
+    "macro_f1": 0.5237464889025845,
+    "accuracy": 0.5914123576332394,
+    "kappa": 0.21756027380783405,
+    "confusion_matrix": [
+      [
+        11081,
+        5301,
+        1079
+      ],
+      [
+        2609,
+        2681,
+        268
+      ],
+      [
+        739,
+        300,
+        1141
+      ]
+    ],
+    "per_class": {
+      "NREM": {
+        "precision": 0.7679672881003534,
+        "recall": 0.6346142832598362,
+        "f1-score": 0.6949513954217623,
+        "support": 17461.0
+      },
+      "REM": {
+        "precision": 0.3237140787249457,
+        "recall": 0.482367758186398,
+        "f1-score": 0.38742774566473986,
+        "support": 5558.0
+      },
+      "Wake": {
+        "precision": 0.45860128617363344,
+        "recall": 0.523394495412844,
+        "f1-score": 0.4888603256212511,
+        "support": 2180.0
+      }
+    },
+    "per_subject_f1_mean": 0.5011164076047083,
+    "per_subject_f1_std": 0.0989911133386698,
+    "per_subject_f1_min": 0.3252311002788573,
+    "per_subject_f1_max": 0.6887720078714374,
+    "per_subject_details": [
+      {
+        "subject_id": "1066528",
+        "f1_macro": 0.4555317795619933
+      },
+      {
+        "subject_id": "1360686",
+        "f1_macro": 0.6228927969382099
+      },
+      {
+        "subject_id": "1449548",
+        "f1_macro": 0.41839250960071434
+      },
+      {
+        "subject_id": "1455390",
+        "f1_macro": 0.490243460687867
+      },
+      {
+        "subject_id": "1818471",
+        "f1_macro": 0.35120309951060363
+      },
+      {
+        "subject_id": "2598705",
+        "f1_macro": 0.3509360006677013
+      },
+      {
+        "subject_id": "2638030",
+        "f1_macro": 0.6081971829905115
+      },
+      {
+        "subject_id": "3509524",
+        "f1_macro": 0.4705929247633283
+      },
+      {
+        "subject_id": "3997827",
+        "f1_macro": 0.5774309762902919
+      },
+      {
+        "subject_id": "4018081",
+        "f1_macro": 0.36038582605721786
+      },
+      {
+        "subject_id": "4314139",
+        "f1_macro": 0.5317324560760072
+      },
+      {
+        "subject_id": "4426783",
+        "f1_macro": 0.6887720078714374
+      },
+      {
+        "subject_id": "46343",
+        "f1_macro": 0.5012083566958044
+      },
+      {
+        "subject_id": "5132496",
+        "f1_macro": 0.362859010001883
+      },
+      {
+        "subject_id": "5383425",
+        "f1_macro": 0.5651989048613522
+      },
+      {
+        "subject_id": "5498603",
+        "f1_macro": 0.513045678229629
+      },
+      {
+        "subject_id": "5797046",
+        "f1_macro": 0.5465351007669033
+      },
+      {
+        "subject_id": "6220552",
+        "f1_macro": 0.4765490163211397
+      },
+      {
+        "subject_id": "759667",
+        "f1_macro": 0.38723387246943125
+      },
+      {
+        "subject_id": "7749105",
+        "f1_macro": 0.4862914862914863
+      },
+      {
+        "subject_id": "781756",
+        "f1_macro": 0.486094773641688
+      },
+      {
+        "subject_id": "8000685",
+        "f1_macro": 0.46349576030854744
+      },
+      {
+        "subject_id": "8173033",
+        "f1_macro": 0.5077888996077824
+      },
+      {
+        "subject_id": "8258170",
+        "f1_macro": 0.5065660672871299
+      },
+      {
+        "subject_id": "844359",
+        "f1_macro": 0.41348826450011283
+      },
+      {
+        "subject_id": "8530312",
+        "f1_macro": 0.5634395602532517
+      },
+      {
+        "subject_id": "8686948",
+        "f1_macro": 0.6230889029158759
+      },
+      {
+        "subject_id": "8692923",
+        "f1_macro": 0.6182298739834412
+      },
+      {
+        "subject_id": "9106476",
+        "f1_macro": 0.3252311002788573
+      },
+      {
+        "subject_id": "9618981",
+        "f1_macro": 0.5802421191016226
+      },
+      {
+        "subject_id": "9961348",
+        "f1_macro": 0.6817108672141349
+      }
+    ]
+  },
+  "feature_importances": {
+    "roll_std_vm_2m": 0.15861661732196808,
+    "roll_std_vm_5m": 0.10617323964834213,
+    "time_since_onset": 0.09409164637327194,
+    "fft_power_low": 0.05564681440591812,
+    "night_fraction": 0.05424199253320694,
+    "time_since_last_movement": 0.04675549641251564,
+    "std_angle": 0.04520920664072037,
+    "delta_std_vm": 0.04425898939371109,
+    "mean_angle": 0.03844526782631874,
+    "lag_mean_vm_3": 0.0319674126803875,
+    "std_vm": 0.030518395826220512,
+    "mean_vm": 0.0285867340862751,
+    "fft_dominant_freq": 0.028470974415540695,
+    "roll_mean_vm_2m": 0.028248561546206474,
+    "roll_mean_vm_5m": 0.02798689529299736,
+    "lag_mean_vm_1": 0.02777370624244213,
+    "fft_spectral_entropy": 0.027669936418533325,
+    "lag_mean_vm_2": 0.02694895677268505,
+    "fft_power_high": 0.025484850630164146,
+    "sin_90min": 0.02517591044306755,
+    "cos_90min": 0.022700097411870956,
+    "angle_change": 0.01604396104812622,
+    "delta_vm": 0.008984211832284927
+  },
+  "elapsed_seconds": 186.77370595932007
+}

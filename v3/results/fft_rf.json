@@ -1,0 +1,228 @@
+{
+  "name": "fft_rf",
+  "model": "rf",
+  "stages": 3,
+  "features": [
+    "mean_vm",
+    "std_vm",
+    "time_since_last_movement",
+    "roll_mean_vm_2m",
+    "roll_std_vm_2m",
+    "roll_mean_vm_5m",
+    "roll_std_vm_5m",
+    "fft_power_low",
+    "fft_power_high",
+    "fft_dominant_freq",
+    "fft_spectral_entropy"
+  ],
+  "normalize": false,
+  "feature_sets": [
+    "baseline",
+    "frequency"
+  ],
+  "notes": "Phase 2: FFT frequency-domain features",
+  "cv_scores": {
+    "accuracy": {
+      "mean": 0.4869248288862842,
+      "std": 0.045546725673865765
+    },
+    "f1_macro": {
+      "mean": 0.4459596697960403,
+      "std": 0.03286916221628781
+    },
+    "f1_weighted": {
+      "mean": 0.5095138874636875,
+      "std": 0.05217673605287158
+    }
+  },
+  "best_thresholds": {
+    "rem": 0.47000000000000014
+  },
+  "best_threshold_f1": 0.45444578139188807,
+  "report": {
+    "macro_f1": 0.45444578139188807,
+    "accuracy": 0.5222032620342077,
+    "kappa": 0.1667831121539174,
+    "confusion_matrix": [
+      [
+        9512,
+        4987,
+        2962
+      ],
+      [
+        2461,
+        2167,
+        930
+      ],
+      [
+        541,
+        159,
+        1480
+      ]
+    ],
+    "per_class": {
+      "NREM": {
+        "precision": 0.760108678280326,
+        "recall": 0.5447568867762442,
+        "f1-score": 0.6346622185154295,
+        "support": 17461.0
+      },
+      "REM": {
+        "precision": 0.2963216190345959,
+        "recall": 0.3898884490824037,
+        "f1-score": 0.33672597311786184,
+        "support": 5558.0
+      },
+      "Wake": {
+        "precision": 0.2755026061057334,
+        "recall": 0.6788990825688074,
+        "f1-score": 0.3919491525423729,
+        "support": 2180.0
+      }
+    },
+    "per_subject_f1_mean": 0.42766713460557426,
+    "per_subject_f1_std": 0.12373614294398169,
+    "per_subject_f1_min": 0.1612496874515352,
+    "per_subject_f1_max": 0.6887684433528097,
+    "per_subject_details": [
+      {
+        "subject_id": "1066528",
+        "f1_macro": 0.36349568547223754
+      },
+      {
+        "subject_id": "1360686",
+        "f1_macro": 0.48041695423700137
+      },
+      {
+        "subject_id": "1449548",
+        "f1_macro": 0.39425652324174876
+      },
+      {
+        "subject_id": "1455390",
+        "f1_macro": 0.48390716709320064
+      },
+      {
+        "subject_id": "1818471",
+        "f1_macro": 0.3183567767492117
+      },
+      {
+        "subject_id": "2598705",
+        "f1_macro": 0.1612496874515352
+      },
+      {
+        "subject_id": "2638030",
+        "f1_macro": 0.6808500537005989
+      },
+      {
+        "subject_id": "3509524",
+        "f1_macro": 0.4863893168977915
+      },
+      {
+        "subject_id": "3997827",
+        "f1_macro": 0.29693908364420657
+      },
+      {
+        "subject_id": "4018081",
+        "f1_macro": 0.4499006718682191
+      },
+      {
+        "subject_id": "4314139",
+        "f1_macro": 0.4021595123257789
+      },
+      {
+        "subject_id": "4426783",
+        "f1_macro": 0.6887684433528097
+      },
+      {
+        "subject_id": "46343",
+        "f1_macro": 0.4429200723790372
+      },
+      {
+        "subject_id": "5132496",
+        "f1_macro": 0.29077454736683944
+      },
+      {
+        "subject_id": "5383425",
+        "f1_macro": 0.6513185232268227
+      },
+      {
+        "subject_id": "5498603",
+        "f1_macro": 0.499854715275021
+      },
+      {
+        "subject_id": "5797046",
+        "f1_macro": 0.3364958544600114
+      },
+      {
+        "subject_id": "6220552",
+        "f1_macro": 0.402030022333441
+      },
+      {
+        "subject_id": "759667",
+        "f1_macro": 0.3857793373416413
+      },
+      {
+        "subject_id": "7749105",
+        "f1_macro": 0.319047619047619
+      },
+      {
+        "subject_id": "781756",
+        "f1_macro": 0.2738518691263772
+      },
+      {
+        "subject_id": "8000685",
+        "f1_macro": 0.48246848295149974
+      },
+      {
+        "subject_id": "8173033",
+        "f1_macro": 0.45564691405483354
+      },
+      {
+        "subject_id": "8258170",
+        "f1_macro": 0.3759435698263707
+      },
+      {
+        "subject_id": "844359",
+        "f1_macro": 0.4517396403008857
+      },
+      {
+        "subject_id": "8530312",
+        "f1_macro": 0.3129676356114644
+      },
+      {
+        "subject_id": "8686948",
+        "f1_macro": 0.3402076738940922
+      },
+      {
+        "subject_id": "8692923",
+        "f1_macro": 0.5908976635809556
+      },
+      {
+        "subject_id": "9106476",
+        "f1_macro": 0.4035896322059844
+      },
+      {
+        "subject_id": "9618981",
+        "f1_macro": 0.6166654757785753
+      },
+      {
+        "subject_id": "9961348",
+        "f1_macro": 0.41879204797699376
+      }
+    ]
+  },
+  "feature_importances": {
+    "roll_std_vm_5m": 0.25785312319951964,
+    "roll_std_vm_2m": 0.20012461173736087,
+    "fft_power_high": 0.09489631002468862,
+    "fft_power_low": 0.0837723236180355,
+    "time_since_last_movement": 0.060613752153128454,
+    "std_vm": 0.058169118564320686,
+    "mean_vm": 0.05602239672184174,
+    "roll_mean_vm_2m": 0.055370063955186496,
+    "roll_mean_vm_5m": 0.05237551727094638,
+    "fft_dominant_freq": 0.04307222237774741,
+    "fft_spectral_entropy": 0.037730560377224165
+  },
+  "elapsed_seconds": 230.54460906982422
+}

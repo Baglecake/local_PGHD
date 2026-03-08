@@ -1,0 +1,25 @@
+# Data (too large for git, download separately)
+data.zip
+v3/.data/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Zip files (data.zip is 572MB, must be downloaded separately)
+*.zip

@@ -1,0 +1,255 @@
+{
+  "name": "full_rf",
+  "model": "rf",
+  "stages": 3,
+  "features": [
+    "mean_vm",
+    "std_vm",
+    "time_since_last_movement",
+    "roll_mean_vm_2m",
+    "roll_std_vm_2m",
+    "roll_mean_vm_5m",
+    "roll_std_vm_5m",
+    "fft_power_low",
+    "fft_power_high",
+    "fft_dominant_freq",
+    "fft_spectral_entropy",
+    "time_since_onset",
+    "night_fraction",
+    "sin_90min",
+    "cos_90min",
+    "delta_vm",
+    "delta_std_vm",
+    "lag_mean_vm_1",
+    "lag_mean_vm_2",
+    "lag_mean_vm_3",
+    "mean_angle",
+    "std_angle",
+    "angle_change"
+  ],
+  "normalize": false,
+  "feature_sets": [
+    "baseline",
+    "frequency",
+    "circadian",
+    "transition",
+    "angular"
+  ],
+  "notes": "All features combined (RF)",
+  "cv_scores": {
+    "accuracy": {
+      "mean": 0.559758505659709,
+      "std": 0.026561498317485967
+    },
+    "f1_macro": {
+      "mean": 0.5195536299463213,
+      "std": 0.029851213616002032
+    },
+    "f1_weighted": {
+      "mean": 0.5835207026385169,
+      "std": 0.03187017363748134
+    }
+  },
+  "best_thresholds": {
+    "rem": 0.5200000000000002
+  },
+  "best_threshold_f1": 0.523564567578514,
+  "report": {
+    "macro_f1": 0.523564567578514,
+    "accuracy": 0.6064526370094051,
+    "kappa": 0.23113327753893032,
+    "confusion_matrix": [
+      [
+        11645,
+        4223,
+        1593
+      ],
+      [
+        2848,
+        2338,
+        372
+      ],
+      [
+        708,
+        173,
+        1299
+      ]
+    ],
+    "per_class": {
+      "NREM": {
+        "precision": 0.7660680218406684,
+        "recall": 0.6669148387835748,
+        "f1-score": 0.713061049537689,
+        "support": 17461.0
+      },
+      "REM": {
+        "precision": 0.3471933471933472,
+        "recall": 0.42065491183879095,
+        "f1-score": 0.3804100227790433,
+        "support": 5558.0
+      },
+      "Wake": {
+        "precision": 0.39797794117647056,
+        "recall": 0.5958715596330275,
+        "f1-score": 0.4772226304188097,
+        "support": 2180.0
+      }
+    },
+    "per_subject_f1_mean": 0.5150812402670754,
+    "per_subject_f1_std": 0.1123753142673328,
+    "per_subject_f1_min": 0.3084752195663046,
+    "per_subject_f1_max": 0.8200978212538906,
+    "per_subject_details": [
+      {
+        "subject_id": "1066528",
+        "f1_macro": 0.45725851430927983
+      },
+      {
+        "subject_id": "1360686",
+        "f1_macro": 0.6081922208640919
+      },
+      {
+        "subject_id": "1449548",
+        "f1_macro": 0.3958058938627729
+      },
+      {
+        "subject_id": "1455390",
+        "f1_macro": 0.45101153426977897
+      },
+      {
+        "subject_id": "1818471",
+        "f1_macro": 0.3873568929619611
+      },
+      {
+        "subject_id": "2598705",
+        "f1_macro": 0.3084752195663046
+      },
+      {
+        "subject_id": "2638030",
+        "f1_macro": 0.6879016456745645
+      },
+      {
+        "subject_id": "3509524",
+        "f1_macro": 0.5073719792865362
+      },
+      {
+        "subject_id": "3997827",
+        "f1_macro": 0.49649743016382736
+      },
+      {
+        "subject_id": "4018081",
+        "f1_macro": 0.43779383098268543
+      },
+      {
+        "subject_id": "4314139",
+        "f1_macro": 0.5659677680973886
+      },
+      {
+        "subject_id": "4426783",
+        "f1_macro": 0.6589848778431823
+      },
+      {
+        "subject_id": "46343",
+        "f1_macro": 0.6107051760037209
+      },
+      {
+        "subject_id": "5132496",
+        "f1_macro": 0.41879554258605095
+      },
+      {
+        "subject_id": "5383425",
+        "f1_macro": 0.5789570083152875
+      },
+      {
+        "subject_id": "5498603",
+        "f1_macro": 0.5539487843152066
+      },
+      {
+        "subject_id": "5797046",
+        "f1_macro": 0.6071290927580529
+      },
+      {
+        "subject_id": "6220552",
+        "f1_macro": 0.500401510674117
+      },
+      {
+        "subject_id": "759667",
+        "f1_macro": 0.4825970735753828
+      },
+      {
+        "subject_id": "7749105",
+        "f1_macro": 0.8200978212538906
+      },
+      {
+        "subject_id": "781756",
+        "f1_macro": 0.4093196294574946
+      },
+      {
+        "subject_id": "8000685",
+        "f1_macro": 0.45422444084978436
+      },
+      {
+        "subject_id": "8173033",
+        "f1_macro": 0.48614247820942175
+      },
+      {
+        "subject_id": "8258170",
+        "f1_macro": 0.36943767191078947
+      },
+      {
+        "subject_id": "844359",
+        "f1_macro": 0.493866060106629
+      },
+      {
+        "subject_id": "8530312",
+        "f1_macro": 0.4501934383190009
+      },
+      {
+        "subject_id": "8686948",
+        "f1_macro": 0.6517212262731611
+      },
+      {
+        "subject_id": "8692923",
+        "f1_macro": 0.6179025143568877
+      },
+      {
+        "subject_id": "9106476",
+        "f1_macro": 0.35707852190936373
+      },
+      {
+        "subject_id": "9618981",
+        "f1_macro": 0.5480421501823656
+      },
+      {
+        "subject_id": "9961348",
+        "f1_macro": 0.5943404993403573
+      }
+    ]
+  },
+  "feature_importances": {
+    "time_since_onset": 0.154806217547136,
+    "night_fraction": 0.1366966075050761,
+    "roll_std_vm_2m": 0.12273324575830451,
+    "roll_std_vm_5m": 0.11642504728545998,
+    "std_vm": 0.05675783692596907,
+    "fft_power_low": 0.04532239768727114,
+    "std_angle": 0.039539738415970936,
+    "delta_std_vm": 0.03898152082456158,
+    "mean_angle": 0.03502280066879804,
+    "fft_power_high": 0.03212534955929667,
+    "angle_change": 0.02210956453207834,
+    "time_since_last_movement": 0.02119396043037455,
+    "roll_mean_vm_2m": 0.020751312628333008,
+    "cos_90min": 0.02019996314885741,
+    "sin_90min": 0.019071862234233752,
+    "mean_vm": 0.01858391285175246,
+    "fft_spectral_entropy": 0.018010371370368202,
+    "roll_mean_vm_5m": 0.015808873667193763,
+    "lag_mean_vm_2": 0.015491713566776737,
+    "lag_mean_vm_1": 0.014969918728766468,
+    "fft_dominant_freq": 0.014730995841815486,
+    "lag_mean_vm_3": 0.013731700794988417,
+    "delta_vm": 0.006935088026617314
+  },
+  "elapsed_seconds": 246.91488313674927
+}

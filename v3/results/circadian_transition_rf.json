@@ -1,0 +1,239 @@
+{
+  "name": "circadian_transition_rf",
+  "model": "rf",
+  "stages": 3,
+  "features": [
+    "mean_vm",
+    "std_vm",
+    "time_since_last_movement",
+    "roll_mean_vm_2m",
+    "roll_std_vm_2m",
+    "roll_mean_vm_5m",
+    "roll_std_vm_5m",
+    "time_since_onset",
+    "night_fraction",
+    "sin_90min",
+    "cos_90min",
+    "delta_vm",
+    "delta_std_vm",
+    "lag_mean_vm_1",
+    "lag_mean_vm_2",
+    "lag_mean_vm_3"
+  ],
+  "normalize": false,
+  "feature_sets": [
+    "baseline",
+    "circadian",
+    "transition"
+  ],
+  "notes": "Phase 3: circadian + transition features",
+  "cv_scores": {
+    "accuracy": {
+      "mean": 0.5505839239090061,
+      "std": 0.025633888150353796
+    },
+    "f1_macro": {
+      "mean": 0.5109078690806632,
+      "std": 0.03234810325929866
+    },
+    "f1_weighted": {
+      "mean": 0.5747109234757627,
+      "std": 0.029194941625413487
+    }
+  },
+  "best_thresholds": {
+    "rem": 0.5200000000000002
+  },
+  "best_threshold_f1": 0.5125316676817493,
+  "report": {
+    "macro_f1": 0.5125316676817493,
+    "accuracy": 0.5864518433271162,
+    "kappa": 0.2220762036601882,
+    "confusion_matrix": [
+      [
+        10951,
+        4724,
+        1786
+      ],
+      [
+        2582,
+        2501,
+        475
+      ],
+      [
+        706,
+        148,
+        1326
+      ]
+    ],
+    "per_class": {
+      "NREM": {
+        "precision": 0.769084907648009,
+        "recall": 0.6271691197525915,
+        "f1-score": 0.6909148264984227,
+        "support": 17461.0
+      },
+      "REM": {
+        "precision": 0.33921063339210633,
+        "recall": 0.4499820079165167,
+        "f1-score": 0.3868223648596396,
+        "support": 5558.0
+      },
+      "Wake": {
+        "precision": 0.3696682464454976,
+        "recall": 0.6082568807339449,
+        "f1-score": 0.4598578116871857,
+        "support": 2180.0
+      }
+    },
+    "per_subject_f1_mean": 0.5054994107686686,
+    "per_subject_f1_std": 0.10263381295487109,
+    "per_subject_f1_min": 0.2937705984053666,
+    "per_subject_f1_max": 0.7611067469669197,
+    "per_subject_details": [
+      {
+        "subject_id": "1066528",
+        "f1_macro": 0.47071084127653134
+      },
+      {
+        "subject_id": "1360686",
+        "f1_macro": 0.5813488669326585
+      },
+      {
+        "subject_id": "1449548",
+        "f1_macro": 0.4855417781344748
+      },
+      {
+        "subject_id": "1455390",
+        "f1_macro": 0.4713254921710887
+      },
+      {
+        "subject_id": "1818471",
+        "f1_macro": 0.39756787628184526
+      },
+      {
+        "subject_id": "2598705",
+        "f1_macro": 0.2937705984053666
+      },
+      {
+        "subject_id": "2638030",
+        "f1_macro": 0.6952482339803323
+      },
+      {
+        "subject_id": "3509524",
+        "f1_macro": 0.5350384695362861
+      },
+      {
+        "subject_id": "3997827",
+        "f1_macro": 0.5104551647851499
+      },
+      {
+        "subject_id": "4018081",
+        "f1_macro": 0.44358895886689326
+      },
+      {
+        "subject_id": "4314139",
+        "f1_macro": 0.5009471168562077
+      },
+      {
+        "subject_id": "4426783",
+        "f1_macro": 0.5895177495607118
+      },
+      {
+        "subject_id": "46343",
+        "f1_macro": 0.6160337070083123
+      },
+      {
+        "subject_id": "5132496",
+        "f1_macro": 0.41879554258605095
+      },
+      {
+        "subject_id": "5383425",
+        "f1_macro": 0.6105178771845439
+      },
+      {
+        "subject_id": "5498603",
+        "f1_macro": 0.5637601294399502
+      },
+      {
+        "subject_id": "5797046",
+        "f1_macro": 0.5365178139092998
+      },
+      {
+        "subject_id": "6220552",
+        "f1_macro": 0.4575943413383921
+      },
+      {
+        "subject_id": "759667",
+        "f1_macro": 0.4077818328112877
+      },
+      {
+        "subject_id": "7749105",
+        "f1_macro": 0.7611067469669197
+      },
+      {
+        "subject_id": "781756",
+        "f1_macro": 0.39881353316408924
+      },
+      {
+        "subject_id": "8000685",
+        "f1_macro": 0.5006346791029571
+      },
+      {
+        "subject_id": "8173033",
+        "f1_macro": 0.43262514888957493
+      },
+      {
+        "subject_id": "8258170",
+        "f1_macro": 0.3680712059778548
+      },
+      {
+        "subject_id": "844359",
+        "f1_macro": 0.5314442906538259
+      },
+      {
+        "subject_id": "8530312",
+        "f1_macro": 0.45074878937110646
+      },
+      {
+        "subject_id": "8686948",
+        "f1_macro": 0.5502502840609981
+      },
+      {
+        "subject_id": "8692923",
+        "f1_macro": 0.5396245640618159
+      },
+      {
+        "subject_id": "9106476",
+        "f1_macro": 0.33811890076007717
+      },
+      {
+        "subject_id": "9618981",
+        "f1_macro": 0.602372501000408
+      },
+      {
+        "subject_id": "9961348",
+        "f1_macro": 0.6106086987537117
+      }
+    ]
+  },
+  "feature_importances": {
+    "time_since_onset": 0.17489398050501048,
+    "night_fraction": 0.1564087294955336,
+    "roll_std_vm_5m": 0.14541860430217768,
+    "roll_std_vm_2m": 0.1429904332358296,
+    "std_vm": 0.1089881539149113,
+    "delta_std_vm": 0.04369393481358387,
+    "time_since_last_movement": 0.02633692506225019,
+    "sin_90min": 0.02621480980149963,
+    "roll_mean_vm_5m": 0.025716009256468546,
+    "mean_vm": 0.025625328780057195,
+    "roll_mean_vm_2m": 0.02496217401033006,
+    "cos_90min": 0.024664811904948895,
+    "lag_mean_vm_1": 0.020187392103196495,
+    "lag_mean_vm_2": 0.01881196175818825,
+    "delta_vm": 0.017734972070177695,
+    "lag_mean_vm_3": 0.017351778985836674
+  },
+  "elapsed_seconds": 231.70936799049377
+}

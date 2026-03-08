@@ -1,0 +1,239 @@
+{
+  "name": "circadian_transition_xgb",
+  "model": "xgb",
+  "stages": 3,
+  "features": [
+    "mean_vm",
+    "std_vm",
+    "time_since_last_movement",
+    "roll_mean_vm_2m",
+    "roll_std_vm_2m",
+    "roll_mean_vm_5m",
+    "roll_std_vm_5m",
+    "time_since_onset",
+    "night_fraction",
+    "sin_90min",
+    "cos_90min",
+    "delta_vm",
+    "delta_std_vm",
+    "lag_mean_vm_1",
+    "lag_mean_vm_2",
+    "lag_mean_vm_3"
+  ],
+  "normalize": false,
+  "feature_sets": [
+    "baseline",
+    "circadian",
+    "transition"
+  ],
+  "notes": "XGB with circadian + transition",
+  "cv_scores": {
+    "accuracy": {
+      "mean": 0.5714286616404026,
+      "std": 0.028519880891508465
+    },
+    "f1_macro": {
+      "mean": 0.5141272304046511,
+      "std": 0.03508288193561595
+    },
+    "f1_weighted": {
+      "mean": 0.593091663231759,
+      "std": 0.029736924054571366
+    }
+  },
+  "best_thresholds": {
+    "rem": 0.49000000000000016
+  },
+  "best_threshold_f1": 0.5128749856271063,
+  "report": {
+    "macro_f1": 0.5128749856271063,
+    "accuracy": 0.5804595420453192,
+    "kappa": 0.20946894462513688,
+    "confusion_matrix": [
+      [
+        10798,
+        5218,
+        1445
+      ],
+      [
+        2617,
+        2601,
+        340
+      ],
+      [
+        709,
+        243,
+        1228
+      ]
+    ],
+    "per_class": {
+      "NREM": {
+        "precision": 0.7645143018974795,
+        "recall": 0.6184067350094496,
+        "f1-score": 0.6837422827291436,
+        "support": 17461.0
+      },
+      "REM": {
+        "precision": 0.3226246588935748,
+        "recall": 0.4679740913997841,
+        "f1-score": 0.38193832599118943,
+        "support": 5558.0
+      },
+      "Wake": {
+        "precision": 0.4075672087620312,
+        "recall": 0.563302752293578,
+        "f1-score": 0.47294434816098596,
+        "support": 2180.0
+      }
+    },
+    "per_subject_f1_mean": 0.5026363330968988,
+    "per_subject_f1_std": 0.10278551528239624,
+    "per_subject_f1_min": 0.3207070973061372,
+    "per_subject_f1_max": 0.6906567678755201,
+    "per_subject_details": [
+      {
+        "subject_id": "1066528",
+        "f1_macro": 0.41481869349548567
+      },
+      {
+        "subject_id": "1360686",
+        "f1_macro": 0.6145017714660391
+      },
+      {
+        "subject_id": "1449548",
+        "f1_macro": 0.4570293991028899
+      },
+      {
+        "subject_id": "1455390",
+        "f1_macro": 0.514379442676906
+      },
+      {
+        "subject_id": "1818471",
+        "f1_macro": 0.37314491936417893
+      },
+      {
+        "subject_id": "2598705",
+        "f1_macro": 0.3207070973061372
+      },
+      {
+        "subject_id": "2638030",
+        "f1_macro": 0.5733484351905405
+      },
+      {
+        "subject_id": "3509524",
+        "f1_macro": 0.43282449985777943
+      },
+      {
+        "subject_id": "3997827",
+        "f1_macro": 0.5000279806373988
+      },
+      {
+        "subject_id": "4018081",
+        "f1_macro": 0.43335682405449844
+      },
+      {
+        "subject_id": "4314139",
+        "f1_macro": 0.47211751988638806
+      },
+      {
+        "subject_id": "4426783",
+        "f1_macro": 0.6720978747893288
+      },
+      {
+        "subject_id": "46343",
+        "f1_macro": 0.6325351112044831
+      },
+      {
+        "subject_id": "5132496",
+        "f1_macro": 0.39069441845313596
+      },
+      {
+        "subject_id": "5383425",
+        "f1_macro": 0.6904626029088271
+      },
+      {
+        "subject_id": "5498603",
+        "f1_macro": 0.5251331404645939
+      },
+      {
+        "subject_id": "5797046",
+        "f1_macro": 0.4893722964861545
+      },
+      {
+        "subject_id": "6220552",
+        "f1_macro": 0.5348328837102585
+      },
+      {
+        "subject_id": "759667",
+        "f1_macro": 0.3462157809983897
+      },
+      {
+        "subject_id": "7749105",
+        "f1_macro": 0.6497252747252747
+      },
+      {
+        "subject_id": "781756",
+        "f1_macro": 0.45314228729255684
+      },
+      {
+        "subject_id": "8000685",
+        "f1_macro": 0.5135882067501757
+      },
+      {
+        "subject_id": "8173033",
+        "f1_macro": 0.46623293947431876
+      },
+      {
+        "subject_id": "8258170",
+        "f1_macro": 0.46243527204502816
+      },
+      {
+        "subject_id": "844359",
+        "f1_macro": 0.4886234803689364
+      },
+      {
+        "subject_id": "8530312",
+        "f1_macro": 0.4490686082179649
+      },
+      {
+        "subject_id": "8686948",
+        "f1_macro": 0.5668420664864844
+      },
+      {
+        "subject_id": "8692923",
+        "f1_macro": 0.5930121750612775
+      },
+      {
+        "subject_id": "9106476",
+        "f1_macro": 0.3275710403469401
+      },
+      {
+        "subject_id": "9618981",
+        "f1_macro": 0.5332275153059679
+      },
+      {
+        "subject_id": "9961348",
+        "f1_macro": 0.6906567678755201
+      }
+    ]
+  },
+  "feature_importances": {
+    "roll_std_vm_2m": 0.1612338274717331,
+    "time_since_onset": 0.128722682595253,
+    "roll_std_vm_5m": 0.12694834172725677,
+    "night_fraction": 0.0741485208272934,
+    "std_vm": 0.06943734735250473,
+    "time_since_last_movement": 0.06807824969291687,
+    "delta_std_vm": 0.06326401978731155,
+    "roll_mean_vm_2m": 0.04449961706995964,
+    "roll_mean_vm_5m": 0.040374401956796646,
+    "lag_mean_vm_1": 0.03715716674923897,
+    "sin_90min": 0.035744622349739075,
+    "mean_vm": 0.03480028733611107,
+    "cos_90min": 0.03385396674275398,
+    "lag_mean_vm_2": 0.032974667847156525,
+    "lag_mean_vm_3": 0.032776471227407455,
+    "delta_vm": 0.01598585769534111
+  },
+  "elapsed_seconds": 171.9899709224701
+}
