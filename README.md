@@ -158,10 +158,6 @@ These invariants hold across all code in the repository:
 - **Temporal alignment guard.** `merge_asof(tolerance=30)` prevents stale label assignment.
 - **Cohen's Kappa** reported alongside F1 as the standard inter-rater agreement metric in sleep staging literature.
 
-## Audit History
-
-The `v1/` notebooks contained a critical flaw: after cross-validation, the model was retrained on all data, and all reported metrics reflected training-set performance. The `audit_report.pdf` documents 17 identified issues. The `v2/` notebooks implement all fixes. The `v3/` pipeline was built from scratch for local development and optimization, reproducing v2 results exactly before extending.
-
 ## License
 
 Dataset: [PhysioNet Open Data License](https://physionet.org/content/sleep-accel/1.0.0/)
